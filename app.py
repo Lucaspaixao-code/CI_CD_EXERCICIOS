@@ -1,3 +1,5 @@
 def soma(a, b):
-    c = a + b
-    return c
+    return a + b
+
+def multiplicacao(a, b):
+    return a * b
