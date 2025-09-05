@@ -4,4 +4,3 @@ def soma(a, b):
 
 def multiplicacao(a, b):
     return a * b
-    
