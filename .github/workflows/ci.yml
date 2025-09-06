@@ -3,10 +3,10 @@ name: CI/CD Docker Pipeline
 on:
   push:
     branches:
-      - main
+      - exercicio2
   pull_request:
     branches:
-      - main
+      - exercicio2
 
 jobs:
   build-and-push:
