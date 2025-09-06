@@ -3,10 +3,10 @@ name: CI/CD Docker Pipeline
 on:
   push:
     branches:
-      - exercicio2
+      - main
   pull_request:
     branches:
-      - exercicio2
+      - main
 
 jobs:
   build-and-push:
@@ -25,6 +25,10 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t myusername/my-app:${{ github.sha }} .
+
+      - name: Run tests inside container
+        run: |
+          docker run --rm myusername/my-app:${{ github.sha }} python -m unittest discover -s tests
 
       - name: Push Docker image to Docker Hub
         run: |
